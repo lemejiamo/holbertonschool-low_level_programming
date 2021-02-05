@@ -7,11 +7,10 @@
 */
 int main(void)
 {
-	int n;
+	int n, r;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	int r;
 
 	r = n % 10;
 	if (r == 0)
