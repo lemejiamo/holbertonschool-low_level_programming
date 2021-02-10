@@ -8,7 +8,7 @@
 int main(void)
 {
 	int n;
-	char name[10] = {'H', 'o', 'l', 'b', 'e', 'r', 't', 'o', 'n' };
+	char name[10] = "Holberton";
 			for (n = 0; n <= 9; n++)
 			{
 				_putchar(name[n]);
