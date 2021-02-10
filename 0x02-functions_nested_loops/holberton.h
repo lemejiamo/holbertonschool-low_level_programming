@@ -1,5 +1,5 @@
-#ifndef HEADER_FILE
-#define HEADER_FILE
+#ifndef HOLBERTON_H
+#define HOLBERTON_H
 
 /* similar a putchar */
 
@@ -32,5 +32,9 @@ int _abs(int);
 /* last digit */
 
 int print_last_digit(int);
+
+/* the longest day of my life */
+
+void jack_bauer(void);
 
 #endif
