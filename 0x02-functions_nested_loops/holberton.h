@@ -29,5 +29,8 @@ int print_sign(int n);
 
 int _abs(int);
 
+/* last digit */
+
+int print_last_digit(int);
 
 #endif
