@@ -21,4 +21,13 @@ int _islower(int c);
 
 int _isalpha(int c);
 
+/* sign */
+
+int print_sign(int n);
+
+/* absolute like a vodka */
+
+int _abs(int);
+
+
 #endif
