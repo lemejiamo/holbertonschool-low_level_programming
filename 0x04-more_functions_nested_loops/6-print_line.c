@@ -1,10 +1,10 @@
 #include "holberton.h"
 
-/*
-* print_line - let's do it a way
-*
-* Return: void
-*/
+/**
+ * print_line - let's do it a way
+ *
+ * Return: void
+ */
 
 void print_line(int n)
 {
