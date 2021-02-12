@@ -9,8 +9,9 @@ int _putchar(char c);
 
 void print_line(int n);
 
-/* 7. I feel like I am diagonally parked in a parallel universe  */
+/* 7. I0 feel like I am diagonally parked in a parallel universe  */
 
 void print_diagonal(int n);
 
 #endif
+
