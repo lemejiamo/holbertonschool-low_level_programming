@@ -13,5 +13,9 @@ void print_line(int n);
 
 void print_diagonal(int n);
 
+/* You are so much sunshine in every square inch  */
+
+void print_square(int size);
+
 #endif
 
