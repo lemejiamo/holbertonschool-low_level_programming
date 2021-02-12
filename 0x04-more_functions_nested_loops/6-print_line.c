@@ -12,7 +12,7 @@ int contador;
 
 	if (n > 0)
 	{
-		for (contador = 0; contador <= n; contador++)
+		for (contador = 0; contador < n; contador++)
 		{
 			_putchar ('_');
 		}
