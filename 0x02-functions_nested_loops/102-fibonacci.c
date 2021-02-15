@@ -20,4 +20,5 @@ long int number1, number2, resultado, contador;
 			printf(", ");
 	} while (contador < 50);
 putchar ('\n');
+return (0);
 }
