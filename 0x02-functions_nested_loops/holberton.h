@@ -49,6 +49,8 @@ int add(int, int);
 
 void print_to_98(int n);
 
+/* function that prints the n times table, starting with 0. */
 
+void print_times_table(int n);
 
 #endif
