@@ -20,7 +20,7 @@ do {
 	{
 		suma = suma + resultado;
 	}
-} while (contador < 39);
+} while (contador < 33);
 printf("%ld", suma);
 putchar ('\n');
 return (0);
