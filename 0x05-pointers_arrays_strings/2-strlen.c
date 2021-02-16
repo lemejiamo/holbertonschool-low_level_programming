@@ -1,19 +1,19 @@
 #include "holberton.h"
 
 /**
- * swap_int - swap values
- * @a: value one
- * @b: value two
- * Return: none
+ * _strlen -  count spaces
+ * @s: string
+ * Return: n
  */
 
-void swap_int(int *a, int *b)
+int _strlen(char *s)
+
 {
 
-int i;
+int n;
 
-i = *a
-*a = *b
-*b = i
+while (*s++ != '\0')
+	n++;
 
+return (n);
 }
