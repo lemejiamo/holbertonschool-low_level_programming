@@ -14,13 +14,13 @@ n = 0;
 		{
 		n++;
 		}
-	if ( n % 2 == 0)
+	if (n % 2 == 0)
 		{
-		mitad = n /2;
+		mitad = n / 2;
 		{
 	else
 		{
-		mitad = ( n - 1 ) / 2;
+		mitad = (n - 1) / 2;
 		mitad++;
 		}
 for (mitad ; mitad <= n; mitad++)
