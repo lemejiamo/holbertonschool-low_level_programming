@@ -25,7 +25,7 @@ n = 0;
 		mitad++;
 		}
 
-for (p = mitad ; p <= n; p++)
+for (p = mitad ; p < n; p++)
 	{
 	_putchar (str[p]);
 	}
