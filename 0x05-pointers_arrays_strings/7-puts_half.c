@@ -6,7 +6,7 @@
  */
 void puts_half(char *str)
 {
-int n, mitad;
+int n, p, mitad;
 
 n = 0;
 
@@ -14,18 +14,20 @@ n = 0;
 		{
 		n++;
 		}
+
 	if (n % 2 == 0)
 		{
 		mitad = n / 2;
-		{
+		}
 	else
 		{
 		mitad = (n - 1) / 2;
 		mitad++;
 		}
-for (mitad ; mitad <= n; mitad++)
+
+for (p = mitad ; p <= n; p++)
 	{
-	_putchar (str[mitad]);
+	_putchar (str[p]);
 	}
 _putchar ('\n');
 }
