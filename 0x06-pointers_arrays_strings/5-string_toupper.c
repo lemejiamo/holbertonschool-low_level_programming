@@ -2,7 +2,7 @@
 
 /**
  * *string_toupper - change a string lower to upper
- *
+ * @string: string to convert
  * Return: char
  */
 
