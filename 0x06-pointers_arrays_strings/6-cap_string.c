@@ -15,7 +15,7 @@ while (string[i] != '\0')
 	{
 		if (string[i] >= 'a' && string[i] <= 'z')
 		{
-		string[i + 1] = (string[i + 1] - 32);
+		string[i] = (string[i] - 32);
 		}
 	}
 
