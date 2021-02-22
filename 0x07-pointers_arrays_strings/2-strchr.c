@@ -7,7 +7,8 @@
  * Return: pointer to found char
  */
 
-char *_strchr(char *s, char c) {
+char *_strchr(char *s, char c)
+{
 char *f;
 int i;
 
