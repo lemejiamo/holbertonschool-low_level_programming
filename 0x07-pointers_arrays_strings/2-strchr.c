@@ -7,13 +7,21 @@
  * Return: pointer to found char
  */
 
-char *_strchr(char *s, char c)
-{
+char *_strchr(char *s, char c) {
 char *f;
 int i;
 
-for (i = 0; s[i] != c || s[i] == '\0'; i++)
-	{}
-f = &s[i];
+i = 0;
+while (s[i] != '\0')
+	{
+	if (s[i] == c)
+		{
+		f = &s[i];
+		break;
+		}
+	i++;
+	}
+if (s[i] == '\0')
+	f = &s[i];
 return (f);
 }
