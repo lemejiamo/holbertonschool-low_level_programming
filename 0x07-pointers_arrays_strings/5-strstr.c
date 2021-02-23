@@ -15,7 +15,7 @@ char *p;
 for (; needle[i] != '\0'; i++)
 	{
 	if (haystack[j] == '\0')
-		return (p = &haystack[j]);
+		return ('\0');
 
 	for (; haystack[j] != '\0'; j++)
 		{
