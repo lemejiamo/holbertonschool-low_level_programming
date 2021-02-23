@@ -16,7 +16,7 @@ for (iterador = 0; iterador < size; iterador++)
 	count += a[i + (i * size)];
 	count2 += a[i + ((size - 1 - i) * size)];
 	}
-	printf ("%d, %d\n", count, count2);
+	printf("%d, %d\n", count, count2);
 
 
 }
