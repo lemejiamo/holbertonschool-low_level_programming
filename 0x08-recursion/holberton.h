@@ -1,6 +1,10 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
 
+/* similar a putchar */
+
+int _putchar(char c);
+
 /*  a function that prints a string, followed by a new line */
 
 void _puts_recursion(char *s);
