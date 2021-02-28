@@ -1,7 +1,5 @@
 #include <stdio.h>
-#include <ctype.h>
 #include <stdlib.h>
-#include <string.h>
 /**
  * main - main funtion
  * @argc: integer
@@ -42,4 +40,3 @@ do {
 printf("%d\n", resultado);
 return (0);
 }
-
