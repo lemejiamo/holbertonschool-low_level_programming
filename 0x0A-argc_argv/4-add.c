@@ -9,7 +9,6 @@
  * Return: sum  or error
  */
 
-
 int main(int argc, char *argv[])
 {
 int i = 1, resultado = 0, analisis = 0;
@@ -20,15 +19,12 @@ if (argc == 1)
 	printf("0\n");
 	return (0);
 	}
-
 do {
 	consta = argv[i];
-
-	if ( *consta  == 48)
+	if (*consta  == 48)
 		{
 		resultado += 0;
 		}
-
 	else
 		{
 		analisis = atoi(argv[i]);
@@ -39,10 +35,8 @@ do {
 				}
 			else
 				resultado += analisis;
-
 		}
 	i++;
-
 } while (i < argc);
 
 printf("%d\n", resultado);
