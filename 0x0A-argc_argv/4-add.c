@@ -13,6 +13,7 @@
 int main(int argc, char *argv[])
 {
 int i = 1, resultado = 0, analisis = 0;
+char *consta;
 
 if (argc == 1)
 	{
@@ -21,15 +22,27 @@ if (argc == 1)
 	}
 
 do {
-	analisis = atoi(argv[i]);
-	i++;
-	if (analisis == 0)
+	consta = argv[i];
+
+	if ( *consta  == 48)
 		{
-		printf("Error\n");
-		return (1);
+		resultado += 0;
 		}
+
 	else
-	resultado += analisis;
+		{
+		analisis = atoi(argv[i]);
+			if (analisis == 0)
+				{
+				printf("Error\n");
+				return (1);
+				}
+			else
+				resultado += analisis;
+
+		}
+	i++;
+
 } while (i < argc);
 
 printf("%d\n", resultado);
