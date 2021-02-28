@@ -20,6 +20,6 @@ else
 	{
 	resultado = atoi(argv[1]) * atoi(argv[2]);
 	printf("%d\n", resultado);
-	return (0);
 	}
+return (0);
 }
