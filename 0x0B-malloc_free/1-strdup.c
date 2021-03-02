@@ -25,12 +25,12 @@ while (str[i] != '\0')
 
 
 				/* 1er caso cuaanod la cadena esta vacia */
-if (!*str) 			/* str == 0 */
+if (!str) 			/* str == 0 */
 	return ('\0');
 
 /* 2do caso cadena contiene un valor */
 
-dup = malloc(sizeof(char) * i); 	/* asignamos el tañomaño con mallox */
+dup = malloc(sizeof(char) * (i + 1)); 	/* asignamos el tañomaño con mallox */
 
 for ( ; j <= i; j++)
 	{
