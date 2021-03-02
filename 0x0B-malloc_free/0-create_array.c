@@ -1,7 +1,5 @@
 #include "holberton.h"
 #include <stdlib.h>
-#include <stdio.h>
-
 /**
 * *create_array -  create a array
 * @size: size of  array
@@ -18,7 +16,6 @@ array = malloc(sizeof(int) * size);
 
 if (array == NULL)
 	{
-	printf("Can't allocate %d bytes \n", size);
 	return ('\0');
 	}
 if (!size)
