@@ -24,19 +24,15 @@ char *concatenado;
 if (*s1 == '\0')
 	s1 = "";
 
-else
-	{
-	for (i = 0; s1[i] != '\0'; i++)
-	{}
-	}
-
 if (*s2 == '\0')
         s2 = ""; 
-else
-	{
+
+	for (i = 0; s1[i] != '\0'; i++)
+	{}
+
 	for (j = 0; s2[j] != '\0'; j++)
 	{}
-	}
+
 /* 2do paso asignar el tamaño al concatenado */
 
 concatenado = malloc(sizeof(char) * (i + j + 1));
