@@ -16,6 +16,13 @@ unsigned int i = 0;
 char  *array;
 array = (char *) malloc(sizeof(int) * size);
 
+if (array == NULL)
+	{
+	printf("Can't allocate %d bytes \n", size);
+	return ('\0');
+	}
+
+
 if (!size)
 return ('\0');
 	for (; i < size; i++)
@@ -23,6 +30,5 @@ return ('\0');
 		array[i] = c;
 		}
 return (array);
-free(array);
 }
 
