@@ -32,8 +32,10 @@ if (!str) 			/* str == 0 */
 
 dup = malloc(sizeof(char) * (i + 1)); 	/* asignamos el tañomaño con mallox */
 
-if (dup == '\0')
+if (dup == '\0' || dup == 0)
 	return ('\0');
+
+
 
 for ( ; j <= i; j++)
 	{
