@@ -15,7 +15,7 @@ int j = 0;
 if (!str)
 	return (NULL);
 
-while (str[i] != NULL)
+while (str[i] != '\0')
 	{
 	i++;
 	}
