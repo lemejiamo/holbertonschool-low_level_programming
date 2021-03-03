@@ -8,7 +8,7 @@
 * Return: pointer or null
 */
 
-int **alloc_grid(int height, int width)
+int **alloc_grid(int width, int height)
 {
 int **array;
 int i, j;
@@ -25,7 +25,7 @@ for (i = 0; i < width; i++)
 	array[i] = malloc(height * sizeof(int *));
 	if (array[i] == NULL)
 		{
-		for ( ; i >= 0 ; i--)
+		for (i = i ; i >= 0 ; i--)
 			{
 			free(array[i]);
 			}
