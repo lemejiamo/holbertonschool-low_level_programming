@@ -17,17 +17,19 @@ if (width <= 0 || height <= 0)
 	return (NULL);
 
 array = malloc(width * sizeof(int *));
-if (array == '\0')
+if (array == NULL)
 	return (NULL);
 
 for (i = 0; i < width; i++)
 	{
-	array[i] = malloc(height * sizeof(int));
-
+	array[i] = malloc(height * sizeof(int *));
 	if (array[i] == '\0')
 		{
 		for (j = i; j >= 0 ; j--)
+			{
 			free(array[j]);
+			}
+			free(array);
 			return (NULL);
 		}
 	}
