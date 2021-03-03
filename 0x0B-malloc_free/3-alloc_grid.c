@@ -23,7 +23,7 @@ if (array == NULL)
 for (i = 0; i < width; i++)
 	{
 	array[i] = malloc(height * sizeof(int *));
-	if (array[i] == '\0')
+	if (array[i] == NULL)
 		{
 		for ( ; i >= 0 ; i--)
 			{
