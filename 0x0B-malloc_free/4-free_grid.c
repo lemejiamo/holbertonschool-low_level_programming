@@ -14,5 +14,6 @@ int i = 0;
 	{
 		free(grid[i]);
 	}
+free(grid[i]);
 free(grid);
 }
