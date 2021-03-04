@@ -1,41 +1,37 @@
 #include "holberton.h"
 #include <stdlib.h>
 /**
-* alloc_grid - fill a grid using malloc
-* @width: width
-* @height: height
-* Return: pointer or null
-*/
-
+ * alloc_grid - Name function
+ * @width: whidth array
+ * @height: height array
+ * Return: Value array
+ */
 int **alloc_grid(int width, int height)
 {
-int **array, i;
+	int **intarray, i;
 
-if (height <= 0 || width <= 0)
-{
-	return (NULL);
-}
-
-array = malloc(height * sizeof(int *));
-
-if (array == NULL)
+	if (width <= 0 || height <= 0)
 	{
-	free(array);
-	return (NULL);
-	}
-
-for (i = 0; i < height; i++)
-{
-	array[i] = malloc(width * sizeof(int *));
-	if (array[i] == NULL)
-		{
-		for ( ; i >= 0 ; i--)
-			{
-			free(array[i]);
-			}
-		free(array);
 		return (NULL);
+	}
+	intarray = malloc(sizeof(int *) * height);
+	if (intarray == NULL)
+	{
+		free(intarray);
+		return (NULL);
+	}
+	for (i = 0; i < height; i++)
+	{
+		intarray[i] = malloc(sizeof(int) * width);
+		if (intarray[i] == NULL)
+		{
+			for ( ; i >= 0; i--)
+			{
+				free(intarray[i]);
+			}
+			free(intarray);
+			return (NULL);
 		}
-}
-return (array);
+	}
+	return (intarray);
 }
