@@ -24,7 +24,6 @@ for (i = 0; i < ac; i++)
 		}
 
 }
-printf("%d\n", leng);
 
 michar = malloc(sizeof(char) * (leng + ac + 1));
 if (michar == '\0')
@@ -42,7 +41,6 @@ for (; i < ac; i++)
 michar[m] = '\n';
 m++;
 }
-m++;
 michar[m] = '\0';
 return (michar);
 }
