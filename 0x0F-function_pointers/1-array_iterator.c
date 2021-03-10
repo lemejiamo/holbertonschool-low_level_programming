@@ -10,8 +10,12 @@
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
 unsigned int i = 0;
-for (; i < size; i++)
-	{
-	(*action)(array[i]);
-	}
+
+	if (array == NULL || action == NULL)
+		return;
+
+	for (; i < size; i++)
+		{
+		(*action)(array[i]);
+		}
 }
