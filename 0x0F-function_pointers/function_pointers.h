@@ -1,9 +1,10 @@
-#ifndef _FUNCTION_POINTERS_H
-#define _FUNCTION_POINTERS_H
+#ifndef _FUNCTION_POINTERS_H_
+#define _FUNCTION_POINTERS_H_
+
 #include <stdio.h>
 
-void print_name(char *name, void (*f)(char *));
+/* int int_index(int *array, int size, int (*cmp)(int));*/
 
-int int_index(int *array, int size, int (*cmp)(int));
+void print_name(char *name, void (*f)(char *));
 
 #endif
