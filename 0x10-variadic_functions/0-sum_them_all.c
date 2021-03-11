@@ -1,7 +1,7 @@
 #include "variadic_functions.h"
 #include <stdarg.h>
 /**
- *
+ * sum_them_all - sum all the arguments in a  funtion
  *
  *
  *
@@ -13,17 +13,13 @@ unsigned int suma = 0, i = 0;
 
 	if (n == 0)
 		return 0;
-
-va_list(ap);
-
+va_list ap;
 
 va_start(ap, n);
-
 	for (; i < n; i++ )
 	{
 		suma += va_arg(ap, unsigned int);
 	}
-
 va_end(ap);
 
 return suma;
