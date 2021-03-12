@@ -30,6 +30,6 @@ va_start(ap, n);
 				printf("%s", separator);
 			}
 		}
-va_end ap;
+va_end (ap);
 printf("\n");
 }
