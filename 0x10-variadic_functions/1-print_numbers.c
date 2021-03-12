@@ -21,7 +21,7 @@ va_start(ap, n);
 			if (i == (n - 1))
 				printf("%d\n", va_arg(ap, unsigned int));
 			else
-				printf("%d ", va_arg(ap, unsigned int));
+				printf("%d", va_arg(ap, unsigned int));
 		}
 
 	}
