@@ -13,11 +13,11 @@ va_list(ap);
 
 va_start(ap, n);
 
-                for (; i < n; i++)
-                {
+		for (; i < n; i++)
+		{
 		ch = va_arg(ap, char *);
 
-			if(ch == NULL)
+			if (ch == NULL)
 			{
 				printf("(nil)");
 			}
@@ -28,7 +28,7 @@ va_start(ap, n);
 			{
 				printf("%s", separator);
 			}
-                }
+		}
 va_end(ap);
 printf("\n");
 
