@@ -7,14 +7,14 @@
  */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-unsigned int i = 0;
+unsigned int i;
 char *ch;
 
 va_list(ap);
 
 va_start(ap, n);
 
-		for (; i < n; i++)
+		for (i = 0; i < n; i++)
 		{
 		ch = va_arg(ap, char *);
 
@@ -32,5 +32,4 @@ va_start(ap, n);
 		}
 va_end(ap);
 printf("\n");
-
 }
