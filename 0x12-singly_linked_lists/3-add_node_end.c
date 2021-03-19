@@ -23,7 +23,7 @@ list_t *add_node_end(list_t **head, const char *str)
 /* cuenta el largo de la cadena */
 	while (!str[i])
 	{
-		len += 1
+		len += 1;
 	}
 /* se asigna el tamaño a la posicion newnode->len */
 	newnode->len = len;
