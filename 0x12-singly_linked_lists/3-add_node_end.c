@@ -16,15 +16,11 @@ list_t *add_node_end(list_t **head, const char *str)
 	newnode = malloc(sizeof(list_t));
 	if (newnode == NULL)
 		return (NULL);
-
 	newnode->str = strdup(str);
 	if (newnode->str == NULL)
 		newnode->str = "(nil)";
-/* cuenta el largo de la cadena */
-	while (!str[i])
-	{
-		len += 1;
-	}
+	for(; str[i]; len++, i++)
+	{}
 /* se asigna el tamaño a la posicion newnode->len */
 	newnode->len = len;
 /* se asigna  la ultima posicion al nodo */
