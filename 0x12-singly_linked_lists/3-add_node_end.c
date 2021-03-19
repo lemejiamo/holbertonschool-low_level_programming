@@ -13,13 +13,13 @@ list_t *add_node_end(list_t **head, const char *str)
 	int len = 0, i = 0;
 	list_t *newnode = NULL, *temp = NULL;
 
-	newnode = malloc(sizeof(list_t));
+newnode = malloc(sizeof(list_t));
 	if (newnode == NULL)
 		return (NULL);
-	newnode->str = strdup(str);
+newnode->str = strdup(str);
 	if (newnode->str == NULL)
 		newnode->str = "(nil)";
-	for(; str[i]; len++, i++)
+	for (; str[i]; len++, i++)
 	{}
 /* se asigna el tamaño a la posicion newnode->len */
 	newnode->len = len;
@@ -33,17 +33,13 @@ list_t *add_node_end(list_t **head, const char *str)
 	}
 	else
 	{
-/* asigna espacio de memoria para el puntero temporal */
-		temp = malloc(sizeof(list_t));
-		if (temp == NULL)
-			return (NULL);
 /* se inicia la busqueda desde la cabeza */
 		temp = *head;
 		for (temp = *head; temp->next != NULL;)
 		{
 		temp = temp->next;
 		}
-	temp->next = newnode;
-	return (newnode);
+		temp->next = newnode;
+		return (newnode);
 	}
 }
