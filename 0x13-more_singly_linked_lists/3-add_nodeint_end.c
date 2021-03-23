@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- *add_node_end - add node  at the end of linked list
+ *add_nodeint_end - add node  at the end of linked list
  *@head: pointer to head of list
  *@n: data to write in a node
  *Return: the address of new node NULL if failes
