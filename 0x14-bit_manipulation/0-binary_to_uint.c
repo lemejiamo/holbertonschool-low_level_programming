@@ -12,12 +12,13 @@ int _strlen_recursion(const char *s)
 		return (0);
 	return (1 + _strlen_recursion(s + 1));
 }
-/**
- *
- *
- *
- */
 
+/**
+ * expo -  expo a number
+ * @x: number
+ * @n: expo
+ * Return: result of expo
+ */
 int expo(int x, int n)
 {
 /*	unsigned int  res = 1;*/
@@ -29,8 +30,6 @@ int expo(int x, int n)
 
 /*	return ();*/
 }
-
-
 
 /**
  * binary_to_uint - converto to dec
