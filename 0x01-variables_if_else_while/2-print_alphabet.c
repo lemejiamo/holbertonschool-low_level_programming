@@ -1,7 +1,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 
-/*
+/**
  * main - el alfabeto en minuscula
  * Return: siempre 0
 */
