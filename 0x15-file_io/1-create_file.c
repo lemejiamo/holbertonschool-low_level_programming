@@ -11,20 +11,18 @@ int create_file(const char *filename, char *text_content)
 	int size = 0, fi;
 
 	if (filename == NULL)
-		return (0);
+		return (-1);
 
-	fi = open(filename, O_WRONLY | O_CREAT, (S_IRUSR | S_IWUSR));
-
+	fi = open(filename, O_WRONLY | O_CREAT | O_TRUNC, (S_IRUSR | S_IWUSR));
 	if (fi == -1)
 		return (-1);
 
-	for (; text_content[size] != '\0'; size++)
-	{}
-
 	if (text_content != NULL)
 	{
+		for (; text_content[size] != '\0'; size++)
+		{}
 		write(fi, text_content, size);
-		close(fi);
 	}
+	close(fi);
 	return (1);
 }
