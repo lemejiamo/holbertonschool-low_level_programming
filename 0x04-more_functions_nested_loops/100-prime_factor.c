@@ -1,15 +1,15 @@
 #include <stdio.h>
 /**
- *main - function
+ *main - entry point
  *Return: None
  */
 int main(void)
 {
-	const long prime[] = "612852475143";
-	long j = prime;
+	unsigned long j = 612852475143;
 	long i;
 
-	do {
+	do
+	{
 		i = 2;
 		while (j % i != 0)
 			i++;
