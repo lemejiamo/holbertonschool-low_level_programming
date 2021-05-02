@@ -6,18 +6,18 @@
  */
 size_t print_dlistint(const dlistint_t *h)
 {
-	/* initialitation of variables */
-	int i = 0;
+  /* initialitation of variables */
+  int i = 0;
 
-	/* firts verify the data is valid */
+  /* firts verify the data is valid */
 
-	if (h == NULL)
-		return (0);
-	/* loop to print the nodes */
-	for (i = 0; h != NULL; i++)
-	{
-		printf("%d\n", h->n);
-		h = h->next;
-	}
-	return (i);
+  if (h == NULL)
+    return (0);
+  /* loop to print the nodes */
+  for (i = 0; h != NULL; i++)
+  {
+    printf("%d\n", h->n);
+    h = h->next;
+  }
+  return (i);
 }
