@@ -9,7 +9,7 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
 	/* initialitation of variables */
 	dlistint_t *new = NULL, *prev = NULL;
-	/*memory assing */
+
 	if (!head)
 		return (NULL);
 
