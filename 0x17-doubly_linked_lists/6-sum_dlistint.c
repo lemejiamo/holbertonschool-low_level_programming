@@ -10,6 +10,9 @@ int sum_dlistint(dlistint_t *head)
 	int add = 0;
 	dlistint_t *current = NULL;
 
+	if (head == NULL)
+		return (NULL);
+
 	current = head;
 	do {
 		add += current->n;
