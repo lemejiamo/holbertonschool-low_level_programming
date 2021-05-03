@@ -13,29 +13,17 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 
 	if (h == NULL || *h == NULL)
 		return (NULL);
-
 	new = malloc(sizeof(dlistint_t));
 	if (new == NULL)
 		return (NULL);
-
 	new->n = n;
-	before = *h;
 	after = *h;
-
-	for (; i != idx; i++)
+	for (; i != idx && after != NULL; i++)
 	{
-		if (after->next != NULL)
-		{
+		before = after;
 		after = after->next;
-		before = after->prev;
-		}
-		else if (after->next == NULL && (i + 1) != idx)
-		{
-			printf("last element %d number of index is %u\n", i, idx);
-			return (NULL);
-		}
 	}
-	if (i == idx)
+	if (i == idx && after != NULL)
 	{
 		new->prev = before;
 		new->next = after;
@@ -43,6 +31,12 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		after->prev = new;
 		return (new);
 	}
-
+	else
+	{
+		new->next = NULL;
+		new->prev = before;
+		before->next = new;
+		return (new);
+	}
 	return (NULL);
 }
