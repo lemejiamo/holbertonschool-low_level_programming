@@ -23,28 +23,27 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		before = after;
 		after = after->next;
 	}
-	if (idx == 0)
+	if (idx == 0) /* insert node to begin */
 	{
 		new->next = (*h);
 		new->prev = NULL;
 		(*h)->prev = new;
 		*h = new;
-		return (new);
 	}
-	else if (i == idx && after != NULL)
+	else if (i == idx && after != NULL) /* inser node in the middle */
 	{
 		new->next = after;
 		new->prev = before;
 		before->next = new;
 		after->prev = new;
-		return (new);
 	}
-	else if (i == idx)
+	else if (i == idx && after == NULL) /*insert node at the end */
 	{
 		new->next = NULL;
 		new->prev = before;
 		before->next = new;
-		return (new);
 	}
-	return (NULL);
+	else
+		return (NULL);
+	return (new);
 }
