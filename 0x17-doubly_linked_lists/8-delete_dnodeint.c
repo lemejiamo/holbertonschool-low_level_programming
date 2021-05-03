@@ -20,7 +20,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	if (index == 0) /* delete node at the begin */
 	{
 		if (clear->next == NULL)
-		{	
+		{
 			free(clear);
 			*head = NULL;
 		}
