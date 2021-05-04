@@ -25,7 +25,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	}
 	if (idx == 0) /* insert node to begin */
 	{
-		return(add_dnodeint(h, n));
+		return (add_dnodeint(h, n));
 	}
 	else if (i == idx && after != NULL) /* inser node in the middle */
 	{
