@@ -1,10 +1,13 @@
-0. Preprocessor
-Learning basics to compile -E flag preprocesor
-1- Compiler
-Learning basics to compile -c flag compiler
-2-Assembler
-Learning basics to compile -S flag assembler
-3-Name
-Learning basics to compile  my firts executable
-4
-# holbertonschool-low_level_programming
+#### C - Hash tables, project  0x1A.
+
+Write a function that creates a hash table.
+
+Write a hash function implementing the djb2 algorithm.
+
+Write a function that gives you the index of a key.
+
+Write a function that gives you the index of a key.
+
+Write a function that gives you the index of a key.
+
+Write a function that gives you the index of a key.
