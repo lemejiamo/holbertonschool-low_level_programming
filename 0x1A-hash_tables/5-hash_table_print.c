@@ -8,12 +8,12 @@ void hash_table_print(const hash_table_t *ht)
 	unsigned int i = 0, begin = 0;
 	hash_node_t *slot = NULL;
 
-	if (ht == NULL)
+	if (ht == NULL || ht->array == NULL) 
 		return;
 
 	printf("{");
 
-	for (; i <  ht->size; i++)
+	for (; i < ht->size; i++)
 	{
 		slot = ht->array[i];
 		while (slot != NULL)
