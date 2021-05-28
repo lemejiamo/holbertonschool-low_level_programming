@@ -23,7 +23,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	slot = ht->array[possition];
 	for (; slot; )
 	{
-		if (slot->key == key)
+		if ((strcmp((const char *)slot->key, (const char *)key)) == 0)
 			return (slot->value);
 		slot = slot->next;
 	}
