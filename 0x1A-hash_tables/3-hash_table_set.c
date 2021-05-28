@@ -19,22 +19,22 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	/* apply hash_funtion to key and find a possition in table*/
 	hash_key = hash_djb2((unsigned char *)key);
 	possition = hash_key % ht->size;
-    
-    /* create  a new element to the list */
+
+	/* create  a new element to the list */
 	new_element = malloc(sizeof(hash_node_t));
 	if (new_element == NULL)
 		return (FAIL);
-		new_element->value = strdup((const char *)value);
+	new_element->value = strdup((const char *)value);
 	new_element->key = strdup((const char *)key);
 
 	/*add the element to the list*/
 	slot = ht->array[possition];
-    if (slot == NULL)
+	if (slot == NULL)
 		new_element->next = NULL;
 	else
-	   	new_element->next = slot;
-        
-    ht->array[possition] = new_element;
+		new_element->next = slot;
+
+	ht->array[possition] = new_element;
 
 	return (SUCCES);
 }
