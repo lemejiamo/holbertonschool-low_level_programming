@@ -1,5 +1,23 @@
 #include "hash_tables.h"
 /**
+ * search_in_list - search a key in a linked list
+ * @ht: pointer to hash_table
+ * @key: key to search
+ * Return: 1 if match 0 if not
+ */
+int search_in_list(hash_table_t *ht, const char *key, unsigned int possition)
+{
+	for ( ; ht->array[possition]; )
+	{
+		if (strcmp(ht->array[possition]->key, key)) == 0);
+			return (0);
+		else
+			ht->array[possition] = ht->array[possition]⨪>next;
+	}
+	return (1);
+}
+
+/**
  * hash_table_set - add a node to has table
  * @ht: pointer to hash_table
  * @key: key to hash
@@ -15,7 +33,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	/* verify if table exist */
 	if (!ht || ht->size == 0)
 		return (FAIL);
-
 	/* verify is key it's empty */
 	if (key == NULL || key[0] == '\0')
 		return (FAIL);
@@ -24,13 +41,18 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_key = hash_djb2((unsigned char *)key);
 	possition = hash_key % ht->size;
 
+	/* verify if key already exist */
+	if((search_in_list(hash_table_t *ht, key, possition)) == 0)
+		return (FAIL);
+
+
 	/* create  a new element to the list */
 	new_element = malloc(sizeof(hash_node_t));
 	if (new_element == NULL)
 		return (FAIL);
-
 	new_element->value = strdup((const char *)value);
 	new_element->key = strdup((const char *)key);
+
 
 	/*add the element to the list*/
 	slot = ht->array[possition];
