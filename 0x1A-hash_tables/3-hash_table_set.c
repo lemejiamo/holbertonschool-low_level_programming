@@ -25,7 +25,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (new_element == NULL)
 		return (FAIL);
 	new_element->value = (char *)value;
-	new_element->key = (char *)hash_key;
+	new_element->key = (char *)key;
 
 	/*add the element to the list*/
 	slot = ht->array[possition];
