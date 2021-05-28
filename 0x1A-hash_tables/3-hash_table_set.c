@@ -17,7 +17,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (FAIL);
 
 	/* verify is key it's empty */
-	if (key == NULL)
+	if (key == NULL || key[0] == '\0')
 		return (FAIL);
 
 	/* apply hash_funtion to key and find a possition in table*/
