@@ -13,7 +13,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *new_element = NULL, *slot = NULL;
 
 	/* verify if table exist */
-	if (!ht)
+	if (!ht || ht->size == 0)
+		return (FAIL);
+
+	/* verify is key it's empty */
+	if (key == NULL)
 		return (FAIL);
 
 	/* apply hash_funtion to key and find a possition in table*/
@@ -24,6 +28,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new_element = malloc(sizeof(hash_node_t));
 	if (new_element == NULL)
 		return (FAIL);
+
 	new_element->value = strdup((const char *)value);
 	new_element->key = strdup((const char *)key);
 
