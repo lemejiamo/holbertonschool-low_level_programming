@@ -27,7 +27,6 @@ hash_table_t *hash_table_create(unsigned long int size)
 	{
 
 		table_hash->array[size] = NULL;
-	/*	printf("%p position --> %d\n", (void *)table_hash->array[1025], (int)size); */
 		size--;
 	}
 	return (table_hash);
