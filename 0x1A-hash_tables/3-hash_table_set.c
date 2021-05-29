@@ -1,4 +1,5 @@
 #include "hash_tables.h"
+
 /**
  * search_in_list - search a key in a linked list
  * @ht: pointer to hash_table
@@ -7,16 +8,16 @@
  */
 int search_in_list(hash_table_t *ht, const char *key, unsigned int possition)
 {
+
 	for ( ; ht->array[possition]; )
 	{
-		if (strcmp(ht->array[possition]->key, key)) == 0);
+		if ((strcmp(ht->array[possition]->key, key)) == 0)
 			return (0);
 		else
-			ht->array[possition] = ht->array[possition]⨪>next;
+			ht->array[possition] = ht->array[possition]->next;
 	}
 	return (1);
 }
-
 /**
  * hash_table_set - add a node to has table
  * @ht: pointer to hash_table
@@ -42,7 +43,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	possition = hash_key % ht->size;
 
 	/* verify if key already exist */
-	if((search_in_list(hash_table_t *ht, key, possition)) == 0)
+	if(   (search_in_list(ht, key, possition)) == 0)
 		return (FAIL);
 
 
