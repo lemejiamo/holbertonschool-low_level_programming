@@ -8,14 +8,16 @@
  */
 int search_in_list(hash_table_t *ht, const char *key, unsigned int possition)
 {
+	hash_node_t *initial_point = ht->array[possition];
 
-	for ( ; ht->array[possition]; )
+	for (; ht->array[possition];)
 	{
 		if ((strcmp(ht->array[possition]->key, key)) == 0)
 			return (0);
 		else
 			ht->array[possition] = ht->array[possition]->next;
 	}
+	ht->array[possition] = initial_point; 
 	return (1);
 }
 /**
@@ -43,9 +45,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	possition = hash_key % ht->size;
 
 	/* verify if key already exist */
-	if(   (search_in_list(ht, key, possition)) == 0)
-		return (FAIL);
-
+	if ((search_in_list(ht, key, possition)) == 0)
+	{	
+		free(ht->array[possition]->value);
+		ht->array[possition]->value = (char *)value;
+		return (SUCCES);
+	}
 
 	/* create  a new element to the list */
 	new_element = malloc(sizeof(hash_node_t));
@@ -53,7 +58,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (FAIL);
 	new_element->value = strdup((const char *)value);
 	new_element->key = strdup((const char *)key);
-
 
 	/*add the element to the list*/
 	slot = ht->array[possition];
