@@ -25,7 +25,6 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	while ((int)size >= 0)
 	{
-
 		table_hash->array[size] = NULL;
 		size--;
 	}
