@@ -6,7 +6,7 @@ RM = rm
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
 %.o: %.c m.h
-	$(CC)  $(CFLAGS) -c  -o $<  $@
+	$(CC)  $(CFLAGS) -c $< -o $@
 
 all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
