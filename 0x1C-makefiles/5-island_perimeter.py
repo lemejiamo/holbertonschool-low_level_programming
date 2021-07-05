@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """  programm to calcute the perimeter of island """
 
 
@@ -9,6 +9,7 @@ def island_perimeter(grid):
         Attributes:
         Grid: is rectangular, width and height don’t exceed 100
     """
+
     perimeter = 0
     for i in range(len(grid)):
         for j in range(len(grid[i])):
