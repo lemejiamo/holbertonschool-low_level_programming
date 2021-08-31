@@ -1,5 +1,6 @@
 #include "search_algos.h"
-
+#define NOT_FOUND -1
+#define ARGS_FAIL -1
 /**
  * linear_search - search a value in a array in linear order
  * @array: array to search
@@ -12,7 +13,7 @@ int linear_search(int *array, size_t size, int value)
 	size_t i = 0;
 
 	if (array == NULL || size == 0 || value == '\0')
-		return (-1);
+		return (ARGS_FAIL);
 
 	for (i = 0; array[i] != '\0' && size != i; i++)
 	{
@@ -20,5 +21,5 @@ int linear_search(int *array, size_t size, int value)
 		if (array[i] == value)
 			return (i);
 	}
-	return (-1);
+	return (NOT_FOUND);
 }
