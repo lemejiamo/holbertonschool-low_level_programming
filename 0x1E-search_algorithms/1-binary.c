@@ -23,6 +23,45 @@ void print_array(int *array, size_t size)
 }
 
 /**
+ * _binary_search - search a value in a array with binary method
+ * @array: array to search
+ * @size: size of array
+ * @value: value to search
+ * @possition: possition in the found value
+ * Return: the possition were the item was found or -1 if not found
+ */
+int _binary_search(int *array, size_t size, int value, size_t possition)
+{
+	size_t index = 0;
+	int *_array;
+
+	if (array == NULL || size == 0 || value == '\0')
+		return (ARGS_FAIL);
+
+	print_array(array, size);
+
+	if (size % 2 == 0)
+		index = (size / 2) - 1;
+	else
+		index = (size / 2);
+
+	possition = possition + index + 1;
+
+	if (value == array[index])
+		return (possition - 1);
+
+	if (value > array[index])
+	{
+		_array = &array[index + 1];
+		return (_binary_search(_array, (size - (index + 1)), value, possition));
+	}
+	if (value < array[index])
+		return (_binary_search(array, index, value, 0));
+
+	return (NOT_FOUND);
+}
+
+/**
  * binary_search - search a value in a array with binary method
  * @array: array to search
  * @size: size of array
@@ -31,26 +70,5 @@ void print_array(int *array, size_t size)
  */
 int binary_search(int *array, size_t size, int value)
 {
-	size_t i = 0;
-
-	if (array == NULL || size == 0 || value == '\0')
-		return (ARGS_FAIL);
-
-	print_array(array, size);
-
-	if (size % 2 == 0)
-		i = size / 2;
-	else
-		i = (size / 2) + 1;
-
-	if (value == array[i])
-		return (i);
-
-	if (value > array[i])
-		return (binary_search(&array[i], (size - i), value));
-
-	if (value < array[i])
-		return (binary_search(array, (i - 1), value));
-
-	return (NOT_FOUND);
+	return (_binary_search(array, size, value, 0));
 }
