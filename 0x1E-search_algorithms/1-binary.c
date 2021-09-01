@@ -56,7 +56,7 @@ int _binary_search(int *array, size_t size, int value, size_t possition)
 		return (_binary_search(_array, (size - (index + 1)), value, possition));
 	}
 	if (value < array[index])
-		return (_binary_search(array, index, value, 0));
+		return (_binary_search(array, index, value, (possition - index)));
 
 	return (NOT_FOUND);
 }
